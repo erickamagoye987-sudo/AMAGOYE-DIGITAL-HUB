@@ -1,0 +1,411 @@
+
+/* AMAGOYE DIGITAL HUB - Main Design */
+
+:root {
+    --navy: #10243a;
+    --blue: #1769aa;
+    --gold: #f0b429;
+    --light: #f4f7fb;
+    --white: #ffffff;
+    --text: #354458;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 85px;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--text);
+    line-height: 1.7;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.container {
+    width: min(1120px, 90%);
+    margin: 0 auto;
+}
+
+/* Navigation */
+
+.site-header {
+    background: var(--white);
+    box-shadow: 0 2px 14px rgba(16, 36, 58, 0.08);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.navbar {
+    min-height: 76px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+}
+
+
+.logo {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--navy);
+    font-size: 1.1rem;
+    font-weight: 800;
+    letter-spacing: 0.5px;
+    line-height: 1.2;
+}
+
+.logo-mark {
+    width: 42px;
+    height: 42px;
+    display: grid;
+    place-items: center;
+    border-radius: 9px;
+    background: var(--gold);
+    color: var(--navy);
+    font-size: 1.5rem;
+    font-weight: 900;
+}
+
+.logo-words {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+.logo .logo-subtitle {
+    color: var(--blue);
+    font-size: 0.7rem;
+    letter-spacing: 2px;
+}
+
+
+.nav-menu {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+}
+
+.nav-menu a {
+    font-weight: 600;
+    font-size: 0.95rem;
+}
+
+.nav-menu a:hover,
+.text-link:hover {
+    color: var(--blue);
+}
+
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 1.8rem;
+    cursor: pointer;
+    color: var(--navy);
+}
+
+/* Homepage hero */
+
+.hero {
+    background: linear-gradient(135deg, #10243a, #174c77);
+    color: var(--white);
+    padding: 110px 0;
+}
+
+.hero-content {
+    max-width: 850px;
+    text-align: center;
+}
+
+.eyebrow {
+    color: var(--blue);
+    font-size: 0.8rem;
+    font-weight: 800;
+    letter-spacing: 2px;
+    margin-bottom: 12px;
+}
+
+.hero .eyebrow {
+    color: var(--gold);
+}
+
+.hero h1 {
+    font-size: clamp(2.5rem, 6vw, 4.5rem);
+    line-height: 1.12;
+    margin-bottom: 24px;
+}
+
+.hero h1 span {
+    color: var(--gold);
+}
+
+.hero-text {
+    max-width: 680px;
+    margin: 0 auto 32px;
+    color: #e0e9f3;
+    font-size: 1.08rem;
+}
+
+.hero-buttons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 14px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 13px 23px;
+    border: 2px solid transparent;
+    border-radius: 6px;
+    font: inherit;
+    font-weight: 700;
+    cursor: pointer;
+    transition: transform 0.2s, background 0.2s;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+}
+
+.btn-primary {
+    background: var(--gold);
+    color: var(--navy);
+}
+
+.btn-primary:hover {
+    background: #ffd05c;
+}
+
+.btn-outline {
+    border-color: var(--white);
+    color: var(--white);
+}
+
+/* Shared sections */
+
+.section {
+    padding: 85px 0;
+}
+
+.section-heading {
+    text-align: center;
+    margin-bottom: 42px;
+}
+
+.section-heading h2,
+.about-content h2 {
+    color: var(--navy);
+    font-size: clamp(1.8rem, 4vw, 2.5rem);
+    line-height: 1.25;
+    margin-bottom: 14px;
+}
+
+/* Services */
+
+.service-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 24px;
+}
+
+.service-card {
+    padding: 30px;
+    border: 1px solid #e5eaf0;
+    border-radius: 12px;
+    background: var(--white);
+    box-shadow: 0 8px 25px rgba(16, 36, 58, 0.05);
+    transition: transform 0.2s;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+}
+
+.service-icon {
+    font-size: 2.2rem;
+    margin-bottom: 14px;
+}
+
+.service-card h3 {
+    color: var(--navy);
+    margin-bottom: 10px;
+}
+
+/* About */
+
+.about-section {
+    background: var(--light);
+}
+
+.about-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 55px;
+    align-items: start;
+}
+
+.about-content p {
+    margin-bottom: 18px;
+}
+
+.text-link {
+    display: inline-block;
+    color: var(--blue);
+    font-weight: 700;
+}
+
+/* Contact form */
+
+.contact-content {
+    max-width: 700px;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.contact-form label {
+    font-weight: 700;
+    color: var(--navy);
+    margin-top: 8px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 13px 14px;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    font: inherit;
+    background: var(--white);
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    outline: 2px solid var(--blue);
+    outline-offset: 1px;
+}
+
+.contact-form textarea {
+    resize: vertical;
+}
+
+.contact-form .btn {
+    margin-top: 12px;
+    align-self: flex-start;
+}
+
+.form-feedback {
+    font-size: 0.92rem;
+}
+
+/* Footer */
+
+.site-footer {
+    background: var(--navy);
+    color: var(--white);
+    padding: 25px 0;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+    flex-wrap: wrap;
+    font-size: 0.9rem;
+}
+
+/* Mobile and tablet layouts */
+
+@media (max-width: 760px) {
+    .navbar {
+        min-height: 70px;
+    }
+
+    .logo {
+        font-size: 1rem;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav-menu {
+        display: none;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        background: var(--white);
+        padding: 20px 5%;
+        box-shadow: 0 8px 12px rgba(16, 36, 58, 0.08);
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 18px;
+    }
+
+    .nav-menu.open {
+        display: flex;
+    }
+
+    .hero {
+        padding: 78px 0;
+    }
+
+    .service-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .about-content {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .section {
+        padding: 65px 0;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
+/* Business contact details */
+
+.business-details {
+    background: var(--light);
+    padding: 20px;
+    margin: 0 0 25px;
+    border-radius: 8px;
+}
+
+.business-details p {
+    margin: 6px 0;
+}
+
+.business-details a {
+    color: var(--blue);
+    overflow-wrap: anywhere;
+}
+
+.business-details a:hover {
+    text-decoration: underline;
+}
